@@ -3,7 +3,8 @@ body {
     background-color: #282c34;
     color: #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -20,11 +21,43 @@ a{
     color:#fff
 }
 a:hover{
-    color:crimson
+    color:chartreuse;
 }
 a:visited{
     color: chartreuse;
 }
+
+.banner {
+    border-radius: 100px;
+    background-color:#1e1e1e;
+    margin-top: 10px;
+    width: 90%;
+    height:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle {
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    
+}
+.bio {
+    font-size: 15px;
+    color:bisque;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    margin-left: 15%;
+}
+
+
 #console {
     width: 80%;
     max-width: 600px;
@@ -36,6 +69,7 @@ a:visited{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 #output {
