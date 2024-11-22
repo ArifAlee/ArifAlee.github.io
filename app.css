@@ -19,7 +19,12 @@ a{
     text-decoration: none;
     color:#fff
 }
-
+a:hover{
+    color:crimson
+}
+a:visited{
+    color: chartreuse;
+}
 #console {
     width: 80%;
     max-width: 600px;
