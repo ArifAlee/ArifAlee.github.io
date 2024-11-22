@@ -11,22 +11,25 @@
 <body>
     <div class="container">
         <div class="info-container">
-            <h1>ToDo list application with console</h1>
-            <p>Simple todo app, please open developer console. <br>
-                First choose what you would like to do from below. <br>
+            <h1>Todo list app</h1>
+            <p>Simple todo app. <br>
+                First choose from one of the following options below. <br>
                 Please note to delete a todo, provide the number of that todo.
             </p>
             <ul>
-                <li>To add a todo - new</li>
-                <li>To delete a todo - delete</li>
-                <li>To view todo list - list</li>
-                <li>To quit - quit / q</li>
+                <li>>   To add a todo - new</li>
+                <li>>   To delete a todo - delete</li>
+                <li>>   To view todo list - list</li>
+                <li>>   To quit - quit / q</li>
             </ul>
         </div>
-        <div class="list-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim
-            voluptatibus
-            dolore, tenetur in blanditiis fugiat repudiandae modi ipsa mollitia ea natus cumque, dolorum quam quasi quis
-            consequatur quod ex.</div>
+        <div class="list-container">
+            <div id="output"></div>
+            <div id="input">
+                <input type="text" id="command" placeholder="Please choose a command" />
+                <button id="run">Enter</button>
+            </div>
+        </div></div>
     </div>
 
     <script src="app.js"></script>
