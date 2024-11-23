@@ -12,18 +12,16 @@
     <div class="container">
         <div class="info-container">
             <h1>Todo list app</h1>
-            <p>Simple todo app. <br>
-                First choose from one of the following options below. <br>
-                Please note to delete a todo, provide the number of that todo.
+            <p>Simple todo app. <br><br>
+                First use one of the following commands below: <br>
             </p>
             <ul>
-                <li>>   To add a todo - new</li>
-                <li>>   To delete a todo - delete</li>
-                <li>>   To view todo list - list</li>
-                <li>>   To quit - quit / q</li>
+                <li>>   To add a todo use command '-n' followed by todo</li><br>
+                <li>>   To delete a todo use command '-r' followed by todo number</li><br>
+                <li>>   To view todo list use command '-v' - list</li>            
             </ul>
         </div>
-        <div class="list-container">
+        <div id="list-container">
             <div id="output"></div>
             <div id="input">
                 <input type="text" id="command" placeholder="Please choose a command" />

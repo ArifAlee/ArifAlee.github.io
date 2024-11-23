@@ -28,42 +28,75 @@
 // }
 // console.log("You have quit the app");
 
+
 const outputDiv = document.getElementById('output');
-const commandInput = document.getElementById('command');
+const input = document.getElementById('command');
 const runButton = document.getElementById('run');
+let todoList = [];
 
 // Function to add output to the console
-function addOutput(text) {
+function addOutput(text, color) {
     const div = document.createElement('div');
     div.textContent = text;
+    div.style.color = color;
     outputDiv.appendChild(div);
     outputDiv.scrollTop = outputDiv.scrollHeight; // Auto-scroll
 
-    const list = [];
-    (text) => {
-        if (text === "new"){
-            
-        }
-    }
 }
+const viewList = () => {
+    todoList.forEach((task, index) => addOutput(`> ${index + 1}. ${task}`));
+};
+//Welcome message
+addOutput(`> Welcome to a very simple todo list`, 'chartreuse');
+addOutput(`> Please follow the instructions to begin`, 'chartreuse');
 
 // Execute code and handle errors
 runButton.addEventListener('click', () => {
-    const command = commandInput.value;
-    commandInput.value = ''; // Clear the input field
-    if (command.trim() === '') return;
+    const userInput = input.value;
+    input.value = ''; // Clear the input field
+    if (userInput.trim() === '') return;
 
-    // Display the command
-    addOutput(`> ${command}`);
+    const [command, ...args] = userInput.split(' ');
+    const task = args.join(' ');
+
+    switch (command.toLowerCase()) {
+        case '-n':
+            if (task) {
+                todoList.push(task);
+                addOutput(`> ${task}`)
+                addOutput(`> Added: ${task}`, 'chartreuse');
+            } else {
+                addOutput(`> ${task}`)
+                addOutput('> Please specify a task to add')
+            }
+            break;
+        case '-r':
+            const indexToRemove = parseInt(task) - 1;
+            if (!isNaN(indexToRemove) && todoList[indexToRemove]) {
+                todoList.splice(indexToRemove, 1);
+                addOutput(`> removed task number ${task} from todo list!`,'orange')
+            } else {
+                addOutput(`> ${task}`)
+                addOutput('> Invalid todo. Please input a number.', 'red')
+            }
+            break;
+        case '-v':
+            addOutput("------------------LIST-------------------")
+            viewList();
+            break;
+        default:
+            addOutput(`> ${command}`)
+            addOutput('> Invalid command. Use -n, -r, -v.', 'red');
+
+    }
+
+
 
 });
 
 // Allow pressing Enter to run commands
-commandInput.addEventListener('keydown', (event) => {
+input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         runButton.click();
     }
 });
-
-
-
