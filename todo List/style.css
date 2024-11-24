@@ -16,6 +16,14 @@ li {
     margin-left: -35px;
 }
 
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #list-container {
     width: 80%;
     max-width: 600px;
@@ -83,13 +91,29 @@ li {
     background-color: #55f121;
 }
 
+@media screen and (max-width:720px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
 
+    }
+    .info-container {
+        margin-right: 0px;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+    #list-container {
+        margin-top: -50px;
+        margin-bottom: 25px;
+    }
+    
+    .info-container h1 {
+        margin-right: 10px;
+        margin-top:0px;
 
-
-
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    }
 }
+
+
+

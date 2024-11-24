@@ -20,6 +20,9 @@ a{
     text-decoration: none;
     color:#fff
 }
+.profile-link{
+    color:#21a1f1;
+}
 a:hover{
     color:chartreuse;
 }
@@ -34,29 +37,46 @@ a:visited{
     width: 90%;
     height:15%;
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     flex-direction: column;
     justify-content: center;
 }
 
+.my-info {
+    text-align: center;
+    text-decoration: underline;
+}
+
 .circle {
     position: fixed;
-    width: 125px;
-    height: 125px;
+    width: 12vh;
+    height: 12vh;
     border-radius: 50%;
     object-fit: cover;
     margin-left: 10px;
     
 }
 .bio {
-    font-size: 15px;
-    color:bisque;
+    font-size:1em;
+    color:rgb(186, 176, 166);
     width: 60%;
-    display: flex;
-    flex-direction: row;
-    position:absolute;
-    margin-left: 15%;
+}
+.bio-mobile {
+    font-size: 1em;
+    display: none;
+}
+.bio-bottom {
+        font-size:1.2em;
+        color:rgb(186, 176, 166);
+        width: 60%;
+        text-align: center;
+        display: none;
 }
 
+.skills {
+    margin-top: 100px;
+}
 
 #console {
     width: 80%;
@@ -104,4 +124,37 @@ a:visited{
 
 #run:hover {
     background-color: #21a1f1;
+}
+
+/* view for slightly larger than mobile, to adjust element below a certain width */
+@media screen and (max-width:720px) {
+    .banner {
+        height:10%;
+    }
+    .circle {
+        width: 75px;
+        height:75px;
+        margin-left: 1%;
+    }
+    .bio {
+        display: none;
+    }
+    .bio-mobile {
+        display: block;
+    }
+    .bio-bottom {
+        display: block;
+        margin-top:25px;
+    }
+    .skills {
+        display: none;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 400px) {  
+    .bio-mobile {
+        margin-left: 50px;
+    }
+
 }

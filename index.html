@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arif Ali Portfolio</title>
     <link rel="stylesheet" href="app.css">
 </head>
-<body> 
+
+<body>
     <!-- Banner containing profile pic and bio -->
     <div class="banner">
         <!-- Profile picture -->
+        <div class="circle">
             <img src="\Profile\IMG_3367.jpg" class="circle">
-
+        </div>
+        <!-- NAME -->
+        <div class="my-info">
+            <span> Arif Ali Portfolio </span>
+        </div>
         <!-- Bio -->
-         <p class="bio"> Transitioning from a successful career in import/export to
-            software development. <br>
-            <br>
-            Proficient in HTML, CSS, JavaScript <br>
-            Frameworks: React, ExpressJS, NodeJS <br>
-            <br>
-            Goal is to be a full stack developer.
+        <div class="bio"> <!-- Main bio-->
+            <p> Transitioning from a successful career in international trade to
+                software development. <br><br>
+                Aim is to be a full stack developer. <br><br>
+                Below are some of my projects, I will be constantly adding and updating as I learn.
             </p>
+        </div>
+        <div class="bio-mobile"> <!-- Hidden bio for mobile view -->
+            <p>
+                | HTML | CSS | JavaScript | <br>
+                | React | NodeJS | MongoDB|
+            </p>
+        </div>
+        
     </div>
     
     <!-- Console with links  -->
     <div id="console">
         <div id="output">
             <ul>
-                <li><a target="_blank"
-                    href="\todo List\index.html">
-                    >   Todo list webapp</a></li>
-                <li><a target="_blank"
-                    href="\MuseumOfCandyWebsite\index.html">
-                    >   Museum of candy - responsive site</a></li>
-                <li><a target="_blank"
-                    href="\PricingPanel\PriceTableStarter\index.html">
-                    >   Simple pricing panel</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/arifalee241/" class="profile-link">> Linkedin profile. </a></li>
+                <li><a target="_blank" href="https://github.com/ArifAlee/ArifAli.github.io" class="profile-link">> GitHub. </a></li>
+                <li><a target="_blank" href="\todo List\index.html">
+                        > A twist on a classic todo list webapp.</a></li>
+                <li><a target="_blank" href="\PricingPanel\PriceTableStarter\index.html">
+                        > Simple pricing panel.</a></li>
             </ul>
-        </div>
+        </div>  
         <div id="input">
-            <input type="text" id="command" placeholder="Enter JavaScript code..." />
+            <input type="text" id="command" placeholder="Welcome to my portfolio..." />
             <button id="run">Run</button>
         </div>
+    </div>
+
+    <div class="skills">
+        <p>
+            | HTML | CSS | JavaScript | React | NodeJS | MongoDB | 
+        </p>
+    </div>
+    
+    <!-- BIO MOVED TO BOTTOM ON MOBILE -->
+    <div class="bio-bottom"> 
+        <p> Transitioning from a successful career in international trade to
+            software development. <br><br>
+            Aim is to be a full stack developer. <br><br>
+            Below are some of my projects, I will be constantly adding and updating as I learn.
+        </p>
     </div>
 
 </body>
 
 
 <script src="app.js"></script>
+
 </html>
