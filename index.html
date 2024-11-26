@@ -1,76 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arif Ali Portfolio</title>
-    <link rel="stylesheet" href="app.css">
-</head>
-
-<body>
-    <!-- Banner containing profile pic and bio -->
-    <div class="banner">
-        <!-- Profile picture -->
-        <div class="circle">
-            <img src="\Profile\IMG_3367.jpg" class="circle">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Arif Ali</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Arif Ali</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <!-- NAME -->
-        <div class="my-info">
-            <span> Arif Ali Portfolio </span>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-        <!-- Bio -->
-        <div class="bio"> <!-- Main bio-->
-            <p> Transitioning from a successful career in international trade to
-                software development. <br><br>
-                Aim is to be a full stack developer. <br><br>
-                Below are some of my projects, I will be constantly adding and updating as I learn.
-            </p>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container circle">
+        <img src="./assets/IMG_3367.jpg" alt="Arif Ali profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, my name is,</p>
+        <h1 class="title">Arif Ali</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('assets/ARIFALI - CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
-        <div class="bio-mobile"> <!-- Hidden bio for mobile view -->
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/arifalee241'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/ArifAlee/ArifAlee.github.io'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/IMG_0969.JPG"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Web Developement (Self taught) <br />Air Freight Coordinator</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree</p>
+            </div>
+          </div>
+          <div class="text-container">
             <p>
-                | HTML | CSS | JavaScript | <br>
-                | React | NodeJS | MongoDB|
+              Dynamic and driven professional transitioning from a successful
+              career in global freight forwarding to web/software development. I
+              have recently decided to focus full-time on enhancing my skills by
+              taking certified courses, solving LeetCode problems, and working
+              on innovative side projects. Detail-oriented and innovative, I am
+              proficient in HTML, CSS, and JavaScript, with a growing expertise
+              in modern frameworks such as React, Express JS and NodeJS. My
+              experience in international trade has honed my problem-solving
+              skills and adaptability, enabling me to thrive in fast-paced
+              environments. I am eager to create captivating and efficient user
+              experiences, collaborate on exciting projects and expand my skill
+              sets.
             </p>
+          </div>
         </div>
-        
-    </div>
-    
-    <!-- Console with links  -->
-    <div id="console">
-        <div id="output">
-            <ul>
-                <li><a target="_blank" href="https://www.linkedin.com/in/arifalee241/" class="profile-link">> Linkedin profile. </a></li>
-                <li><a target="_blank" href="https://github.com/ArifAlee/ArifAli.github.io" class="profile-link">> GitHub. </a></li>
-                <li><a target="_blank" href="\todo List\index.html">
-                        > A twist on a classic todo list webapp.</a></li>
-                <li><a target="_blank" href="\PricingPanel\PriceTableStarter\index.html">
-                        > Simple pricing panel.</a></li>
-            </ul>
-        </div>  
-        <div id="input">
-            <input type="text" id="command" placeholder="Welcome to my portfolio..." />
-            <button id="run">Run</button>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="skills">
-        <p>
-            | HTML | CSS | JavaScript | React | NodeJS | MongoDB | 
-        </p>
-    </div>
-    
-    <!-- BIO MOVED TO BOTTOM ON MOBILE -->
-    <div class="bio-bottom"> 
-        <p> Transitioning from a successful career in international trade to
-            software development. <br><br>
-            I will be constantly adding and updating as I learn. <br><br>
-        </p>
-    </div>
-
-</body>
-
-
-<script src="app.js"></script>
-
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/todowebapp.PNG"
+                alt="Todo List Webapp"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Todo List Webapp
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ArifAlee/ArifAlee.github.io/tree/main/todo%20List'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://arifalee.github.io/todo%20List/index.html?nocache=ndp3mgx3'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/pricingpanel.PNG"
+                alt="Pricing panel"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Simple pricing panel
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ArifAlee/ArifAlee.github.io/tree/main/PricingPanel'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://arifalee.github.io/PricingPanel/PriceTableStarter/index.html?nocache=tinw2rfx'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:arifalee241@gmail.com">arifalee241@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/arifalee241">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
