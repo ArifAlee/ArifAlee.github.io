@@ -1,0 +1,100 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 35vh;
+    max-width: 50vh;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.container {
+    border-left: 0.5px solid grey;
+    border-right: 0.5px solid grey;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+}
+img {
+    height: 35vh;
+    width: 45vh;
+    align-self: center;
+}
+
+.title {
+    border-top: 3px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    font-weight: bolder;
+}
+
+.scores{
+    margin-top: 20px;
+    text-align: center;
+}
+.score-container p{
+    margin-top: -10px;
+    margin-left: 5px;
+}
+
+.playing-to{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.playing-to span{
+    font-weight: bolder;
+}
+
+/* Select button */
+#playingTo {
+    border-radius: 7px;
+    margin-bottom: 5px;
+    width:40px;
+    height: 20px;
+}
+
+
+/* Buttons style */
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+#btn-1 {
+    width: 15vh;
+    height: 5vh;
+    background-color: rgb(47, 209, 120);
+    border-radius: 2px;
+    color: white;
+    cursor: cell;
+}
+#btn-2 {
+    width: 15vh;
+    height: 5vh;
+    background-color:deepskyblue;
+    border-radius: 2px;
+    color: white;
+    cursor: cell;
+}
+#btn-3 {
+    width: 15vh;
+    height: 5vh;
+    background-color:crimson;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+#btn-1:hover{
+    background-color: rgb(47, 209, 171);
+}
+#btn-2:hover{
+    background-color: rgb(34, 171, 171);
+}
+#btn-3:hover{
+    background-color:rgb(204, 1, 35);
+}

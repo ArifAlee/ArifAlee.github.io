@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ping Pong Score Keeper</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image">
+            <img src="joshua-hoehne-RdpBcH7YoKs-unsplash.jpg" alt="Ping Pong picture">
+        </div>
+
+        <div class="title">
+            <p>
+                Ping Pong Score Keeper
+            </p>
+        </div>
+
+        <div class="score-container">
+            <h1 class="scores"><span id="p1">0</span> to <span id="p2">0</span> </h1>
+            <p> Use the buttons below to keep the score.</p>
+
+            <div class="playing-to">
+                <span>Playing To: </span>
+                    <select name="playingTo" id="playingTo">
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                    </select>
+            </div>
+
+            <div class="buttons">
+                <button id="btn-1" name="btn1">+1 Player One</button>
+                <button id="btn-2" name="btn2">+1 Player Two</button>
+                <button id="btn-3" name="btn3">Reset</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
