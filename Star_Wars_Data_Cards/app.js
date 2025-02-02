@@ -2,26 +2,55 @@ import { Characters } from "./characters.js";
 
 const input = document.querySelector("#input");
 const submitBtn = document.querySelector("button");
+const name = document.querySelector(".name");
+const height = document.querySelector(".height");
+const birthYear = document.querySelector(".birth-year");
+const gender = document.querySelector(".gender");
+const hairColor = document.querySelector(".hair-color");
+const skinColor = document.querySelector(".skin-color");
+const eyeColor = document.querySelector(".eye-color");
+const homeworld = document.querySelector(".homeworld");
 
 submitBtn.addEventListener("click", () => {
   const userInput = input.value;
-  updateChar(userInput);
+  // updateChar(userInput);
+  updateCharDetails(userInput);
 });
 // Submit by pressing ENTER
 input.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
-    updateChar(input.value);
+    const userInput = input.value;
+    // updateChar(userInput);
+    updateCharDetails(userInput)
   }
 });
 
 // Function updates h1 where name is displayed
 const updateChar = async function (name) {
+  const charh1 = document.querySelector(".char-name");
   try {
-    const charName = await getCharData(name);
-    const charh1 = document.querySelector(".char-name");
+    const charName = await getCharObj(name);
     charh1.textContent = charName.name;
   } catch (error) {
     console.log("Error updating name", error);
+  }
+};
+
+// Function to update all details fields
+const updateCharDetails = async function (char) {
+  try {
+    const charDetails = await getCharObj(char);
+    name.textContent = charDetails.name;
+    height.textContent = charDetails.height;
+    // mass.textContent = charDetails.mass; -----include!!
+    birthYear.textContent = charDetails.birth_year;
+    gender.textContent = charDetails.gender;
+    hairColor.textContent = charDetails.hair_color;
+    skinColor.textContent = charDetails.skin_color;
+    eyeColor.textContent = charDetails.eye_color;
+    homeworld.textContent = charDetails.homeworld;
+  } catch (error) {
+    console.log("Error updating details", error);
   }
 };
 
@@ -66,36 +95,4 @@ const getCharObj = async function (name) {
   }
 };
 
-async function character(input) {
-  const name = input;
-  const character = await getCharObj(name);
-  try {
-    console.log(character);
-  } catch (error) {
-    console.log("Character not found");
-  }
-}
-character("luke skywalker");
 
-const luke = new Characters(
-  "Luke Skywalker",
-  172,
-  77,
-  "blond",
-  "fair",
-  "blue",
-  "19BBY",
-  "male",
-  "Tatooine"
-);
-
-console.log(luke);
-
-// character.name,
-// character.height,
-// character.mass,
-// character.hair_color,
-// character.skin_color,
-// character.birth_year,
-// character.gender,
-// character.homeworld
