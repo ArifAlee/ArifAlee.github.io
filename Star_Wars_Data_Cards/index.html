@@ -19,7 +19,7 @@
                     <h1>Star Wars Data Cards</h1>
                     <p>Character data for your favourite Star Wars character</p>
                 </div>
-
+                
                 <div class="search-box">
                     <div class="row">
                         <input type="text" name="input" id="input" disabled placeholder="Loading..." autocomplete="off">
@@ -32,13 +32,16 @@
                     </div>
                 </div>
             </div>
-
-            <div class="right-panel-1">
+            
+            <!-- ROTATE CARD -->
+            <button class="rotate-btn"><img src="images/rotate-option-svgrepo-com.svg" class="rotate-img"></button>
+            
+            <div class="right-panel-1 display-flex">
                 <div class="card-container front-card">
                     <div class="name-container">
                         <h2 class="char-name">ID Card</h2>
                     </div>
-
+                    
                     <div class="main-info-container">
                         <div class="card-main">
                             <div class="char-details">
@@ -90,65 +93,47 @@
             </div>
 
             <!-- BACK OF CARD -->
-
-            <div class="right-panel-2">
+            
+            <div class="right-panel-2 display-none">
                 <div class="card-container front-card">
                     <div class="name-container">
                         <h2 class="char-name">Films and Vehicles</h2>
                     </div>
-
+                    
                     <div class="main-info-container">
                         <div class="card-main">
                             <div class="char-details">
-                                <table class="table-1">
-                                    <thead>
-                                        <tr class="main-tr">
-                                            <th> Films </th>                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Height </th>
-                                            <td class="height"> 172 </td>
-                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Birth Year </th>
-                                            <td class="birth-year"> 77 </td>
-                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Gender </th>
-                                            <td class="gender"> Male </td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                <div>
+                                    <span class="film-span main-tr">Films</span>
+                                    <!-- Films dynamically displayed -->
+                                </div>
+                                <div>
+                                    <span class="vehicle-span main-tr">Vehicles</span>
+                                    <!-- Vehicles dynamically displayed -->
+                                </div>
 
-                                <table class="table-2">
-                                    <thead>
-                                        <tr class="main-tr">
-                                            <th> Vehicles </th>
-                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Skin Color </th>
-                                            <td class="skin-color"> 172 </td>
-                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Eye Color </th>
-                                            <td class="eye-color"> 77 </td>
-                                        </tr>
-                                        <tr class="main-tr">
-                                            <th> Homeworld </th>
-                                            <td class="homeworld"> Male </td>
-                                        </tr>
-                                    </thead>
-                                </table>
+
+
+
+
+
+
+
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="gif">
             <img src="images/1280x1024-rocket-7485527-6136344.gif" alt="spaceship gif" class="gif-rotate">
         </div>
     </div>
-
+    
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="app.js"></script>
     <script type="module" src="autocomplete.js"></script>

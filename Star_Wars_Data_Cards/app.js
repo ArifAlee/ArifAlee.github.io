@@ -10,7 +10,11 @@ const skinColor = document.querySelector(".skin-color");
 const eyeColor = document.querySelector(".eye-color");
 const homeworld = document.querySelector(".homeworld");
 const resultsBox = document.querySelector(".result-box");
-
+const rotateBtn = document.querySelector(".rotate-btn")
+const frontCard = document.querySelector(".right-panel-1")
+const backCard = document.querySelector(".right-panel-2")
+const filmSpan = document.querySelector(".film-span")
+const vehicleSpan = document.querySelector(".vehicle-span")
 let characters;
 
 
@@ -119,7 +123,24 @@ const updateCharDetails = async (name) => {
   } else {
     console.log("Character details not found");
   }
+
+  //DISPLAY FILM AND VEHICLES AT THE BACK OF CARD
+
+  starShips.map(ship => {
+    const text = document.createElement("P");
+    text.textContent = ship;
+    text.style.fontWeight = "300";
+    vehicleSpan.appendChild(text)
+  })
+  films.map(film => {
+    const text = document.createElement("P");
+    text.textContent = film;
+    text.style.fontWeight = "300";
+    filmSpan.appendChild(text)
+  })
+
 };
+
 
 
 // USER INPUT HANDLER
@@ -152,4 +173,12 @@ input.addEventListener("keypress", (event) => {
     resultsBox.style.display = "none"; // Hide the results box when no suggestions
   }
 });
+
+rotateBtn.addEventListener("click", () => {
+  frontCard.classList.toggle("display-flex")
+  frontCard.classList.toggle("display-none")
+
+  backCard.classList.toggle("display-flex")
+  backCard.classList.toggle("display-none")
+})
 

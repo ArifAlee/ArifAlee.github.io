@@ -15,6 +15,25 @@ body {
   padding: 20px;
 }
 
+.rotate-btn{
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.rotate-btn:hover{
+  background: none;
+
+}
+.rotate-img{
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  width: 25px;
+  filter: invert(48%) sepia(75%) saturate(387%) hue-rotate(356deg) brightness(91%) contrast(85%);
+}
+
+
 .front-card{
   display: none;
 }
@@ -143,20 +162,26 @@ button:hover {
 
 /* Right Panel Styles */
 .right-panel-1{
-  /* display: none; */
   flex: 1;
+  margin-left: -100px;
   min-width: 0;
-  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: -100px;
+}
+.right-panel-2{
+  flex: 1;
+  margin-left: -100px;
+  min-width: 0;
   justify-content: center;
   align-items: flex-start;
 }
-.right-panel-2{
+/* TOGGLE FRONT AND BACK OF CARD */
+.display-none{
   display: none;
-  flex: 1;
-  min-width: 0;
-  /* display: flex; */
-  justify-content: center;
-  align-items: flex-start;
+}
+.display-flex{
+  display: flex;
 }
 
 
@@ -214,7 +239,7 @@ button:hover {
   min-width: 150px;
 }
 
-.main-tr th {
+.main-tr th{
   text-align: left;
   padding: 8px 5px;
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
@@ -223,6 +248,11 @@ button:hover {
 .main-tr td {
   padding: 8px 5px;
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+}
+
+.film-span, .vehicle-span{
+  color: #ad7d37;
+  font-weight: bold;
 }
 
 
@@ -261,23 +291,24 @@ button:hover {
       gap: 30px;
   }
 
-  .right-panel {
+  .right-panel-1, .right-panel-2 {
       justify-content: center;
+      margin:0;
   }
-
+  
   .card-container {
-      max-width: 400px;
-      max-height:250px;
+    max-width: 400px;
+    max-height:250px;
   }
 }
 
 @media (max-width: 300px) {
   .char-details {
-      flex-direction: column;
-      align-items: center;
-
+    flex-direction: column;
+    align-items: center;
+    
   }
-
+  
   .table-1, .table-2 {
       width: 90%;
       margin-bottom: 15px;
