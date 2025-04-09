@@ -112,8 +112,8 @@ const updateCharDetails = async (name) => {
 
   if (charDetails) {
     charh1.textContent = charDetails.name
-    mass.textContent = charDetails.mass;
-    height.textContent = charDetails.height;
+    mass.textContent = `${charDetails.mass} kg`;
+    height.textContent = `${charDetails.height} cm`;
     birthYear.textContent = charDetails.birth_year;
     gender.textContent = charDetails.gender;
     hairColor.textContent = charDetails.hair_color;
