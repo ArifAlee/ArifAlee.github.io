@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +20,11 @@
                     <h1>Star Wars Data Cards</h1>
                     <p>Character data for your favourite Star Wars character</p>
                 </div>
-                
+
                 <div class="search-box">
                     <div class="row">
-                        <input type="text" name="input" id="input" disabled placeholder="Loading..." autocomplete="off">
+                        <input type="text" name="input" id="input" disabled placeholder="Loading Card Data..."
+                            autocomplete="off">
                         <button type="submit">Search</button>
                     </div>
                     <div class="result-box">
@@ -32,16 +34,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- ROTATE CARD -->
             <button class="rotate-btn"><img src="images/rotate-option-svgrepo-com.svg" class="rotate-img"></button>
-            
+
             <div class="right-panel-1 display-flex">
                 <div class="card-container front-card">
                     <div class="name-container">
                         <h2 class="char-name">ID Card</h2>
                     </div>
-                    
+
                     <div class="main-info-container">
                         <div class="card-main">
                             <div class="char-details">
@@ -93,49 +95,42 @@
             </div>
 
             <!-- BACK OF CARD -->
-            
+
             <div class="right-panel-2 display-none">
                 <div class="card-container front-card">
                     <div class="name-container">
                         <h2 class="char-name">Films and Vehicles</h2>
                     </div>
-                    
+
                     <div class="main-info-container">
                         <div class="card-main">
                             <div class="char-details">
-                                <div>
-                                    <span class="film-span main-tr">Films</span>
+                                <span class="film-vehicle">Films:</span>
+                                <div class="film-span">
                                     <!-- Films dynamically displayed -->
                                 </div>
-                                <div>
-                                    <span class="vehicle-span main-tr">Vehicles</span>
+
+                                <span class="film-vehicle">Vehicles:</span>
+                                <div class="vehicle-span">
                                     <!-- Vehicles dynamically displayed -->
                                 </div>
-
-
-
-
-
-
-
-
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="gif">
             <img src="images/1280x1024-rocket-7485527-6136344.gif" alt="spaceship gif" class="gif-rotate">
         </div>
     </div>
-    
-    
-    
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="app.js"></script>
     <script type="module" src="autocomplete.js"></script>
 </body>
+
 </html>

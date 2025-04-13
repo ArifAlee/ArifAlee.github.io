@@ -96,6 +96,9 @@ const updateChar = (name) => {
 
 // Function to update all details fields
 const updateCharDetails = async (name) => {
+  filmSpan.textContent = "";
+  vehicleSpan.textContent = "";
+
   const charDetails = await getCharObj(name);
 
   const planetUrl = charDetails.homeworld
@@ -125,20 +128,24 @@ const updateCharDetails = async (name) => {
   }
 
   //DISPLAY FILM AND VEHICLES AT THE BACK OF CARD
-
-  starShips.map(ship => {
-    const text = document.createElement("P");
-    text.textContent = ship;
-    text.style.fontWeight = "300";
-    vehicleSpan.appendChild(text)
-  })
   films.map(film => {
     const text = document.createElement("P");
     text.textContent = film;
     text.style.fontWeight = "300";
+    text.style.display = "flex";
     filmSpan.appendChild(text)
   })
 
+  starShips.map(ship => {
+  const text = document.createElement("P");
+  text.textContent = ship;
+  text.style.fontWeight = "300";
+  text.style.display = "flex";
+  vehicleSpan.appendChild(text)
+  console.dir(vehicleSpan)
+  })
+
+  
 };
 
 
@@ -146,12 +153,15 @@ const updateCharDetails = async (name) => {
 // USER INPUT HANDLER
 const handleUserInput = () => {
   const userInput = input.value.trim();
+
   if (userInput) {
     updateChar(userInput);
     updateCharDetails(userInput);
   }
   resultsBox.style.display = "none";
-};
+  
+    
+  }
 
 // EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", async () => {

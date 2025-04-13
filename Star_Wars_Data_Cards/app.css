@@ -225,12 +225,17 @@ button:hover {
   border-top: 2px solid #ad7d37;
 }
 
-.char-details {
+.char-details{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px 10px;
+}
+.char-details span{
+  color: #ad7d37;
+  font-weight: bold;
+  display: inline;
 }
 
 .table-1, .table-2 {
@@ -250,9 +255,17 @@ button:hover {
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
 }
 
+.film-vehicle {
+  margin-top: 50px;
+  font-size: larger;
+}
+
 .film-span, .vehicle-span{
   color: #ad7d37;
   font-weight: bold;
+  margin-top: 25px;
+  font-size: large;
+  margin-left:-25px;
 }
 
 
