@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-size:small
 }
 
 body {
@@ -364,7 +365,6 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
   gap: 0.5rem;
 }
 
@@ -374,7 +374,14 @@ article .icon {
 
 /* PROJECTS SECTION -----------------------------------------------*/
 
+.project-cotainer {
+  display: flex;
+  flex-direction: column;
+}
+
 #projects {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -387,6 +394,9 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  max-width: 30vw;
+  max-height: 25vh;
+  
 }
 
 .project-title {
