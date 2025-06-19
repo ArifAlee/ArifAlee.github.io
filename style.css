@@ -374,11 +374,6 @@ article .icon {
 
 /* PROJECTS SECTION -----------------------------------------------*/
 
-.project-cotainer {
-  display: flex;
-  flex-direction: column;
-}
-
 #projects {
   display: flex;
   flex-direction: column;
